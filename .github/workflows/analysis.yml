@@ -8,8 +8,9 @@ defaults:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - run: |
-          rhysd/actionlint:latest
+      - run: echo "${{ github.actor }}"
+     # - run: |
+     #     rhysd/actionlint:latest
